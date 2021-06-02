@@ -1,0 +1,21 @@
+/* ./assets/css/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add the lines below */
+@layer utilities {
+  @variants responsive {
+    .masonry {
+      column-count: 3;
+      column-gap: 1.5em;
+    }
+    .masonry-small {
+      column-count: 2;
+      column-gap: 1.5em;
+    }
+    .break-inside {
+      break-inside: avoid;
+    }
+  }
+}
