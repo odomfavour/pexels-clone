@@ -127,13 +127,14 @@
             </h1>
             <div class="search-container">
               <div class="nav-search-bar max-w-3xl w-full mr-8">
-                <form action="">
+                <form @submit.prevent="doSearch">
                   <div
                     class="search-container flex bg-lightGrey rounded-md border-0"
                   >
                     <input
                       type="search"
                       placeholder="Search for free photos"
+                      v-model="searchQuery"
                       class="rounded-md py-4 px-5 border-0 focus:border-0 flex-grow bg-myTransparent text-black text-lg font-light outline-none focus:bg-white leading-5"
                     />
                     <button class="rounded-md-t px-4">
@@ -275,6 +276,7 @@ export default {
       apiKey: process.env.PEX_KEY,
       isVisible: false,
       imageSource: '',
+      searchQuery: '',
     }
   },
   created() {
@@ -311,6 +313,27 @@ export default {
     },
     toggleModal() {
       this.isVisible = !this.isVisible
+    },
+    async doSearch() {
+      try {
+        const query = this.searchQuery
+        console.log(query)
+
+        const client = createClient(this.apiKey)
+
+        const { photos } = await client.photos.search({
+          query,
+          per_page: 46,
+          page: 1,
+        })
+
+        this.photos = []
+        this.photos = photos
+        console.log(this.photos)
+        return false
+      } catch (error) {
+        console.trace(error)
+      }
     },
   },
 }
