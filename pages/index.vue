@@ -279,7 +279,7 @@ export default {
       searchQuery: '',
     }
   },
-  created() {
+  mounted() {
     const client = createClient(process.env.PEX_KEY)
 
     client.photos
