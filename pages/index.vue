@@ -1,7 +1,9 @@
 <template>
   <div class="container">
-    <nav class="fixed w-full z-50 bg-transparent px-5 h-16 flex items-center">
-      <a href="#" class="flex items-center sm:mr-8 mr-4">
+    <nav
+      class="fixed w-full z-50 bg-transparent px-4 lg:px-5 h-16 flex items-center"
+    >
+      <a href="#" class="flex items-center sm:mr-8 mr-2">
         <div class="main-navbar-logo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +85,7 @@
               >Join</a
             >
           </li>
-          <li class="mr-4 lg:hidden block">
+          <li class="mr-2 lg:hidden block">
             <a href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +157,7 @@
                 </form>
               </div>
               <div class="search-tags">
-                <ul class="flex items-center p-2.5">
+                <ul class="flex items-center flex-wrap p-2.5">
                   <li class="font-extralight text-sm">
                     Suggested<span class="mr-2.5">:</span>
                   </li>
