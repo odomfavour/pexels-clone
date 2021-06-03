@@ -273,14 +273,14 @@ export default {
       photos: [],
       search_query: '',
       uri: 'https://api.pexels.com/photos/',
-      apiKey: process.env.PEX_KEY,
+      // apiKey: ,
       isVisible: false,
       imageSource: '',
       searchQuery: '',
     }
   },
   created() {
-    const client = createClient(this.apiKey)
+    const client = createClient(process.env.PEX_KEY)
 
     client.photos
       .curated({ per_page: 46, page: 1 })
@@ -298,9 +298,8 @@ export default {
 
         console.log(bgImage.src.original)
 
-        document.querySelector(
-          '.hero'
-        ).style.backgroundImage = `url(${bgImage.src.original})`
+        let heroSection = document.querySelector('.hero')
+        heroSection.style.backgroundImage = `url(${bgImage.src.original})`
       })
       .catch(console.error.bind(console))
   },
@@ -319,7 +318,7 @@ export default {
         const query = this.searchQuery
         console.log(query)
 
-        const client = createClient(this.apiKey)
+        const client = createClient(process.env.PEX_KEY)
 
         const { photos } = await client.photos.search({
           query,
