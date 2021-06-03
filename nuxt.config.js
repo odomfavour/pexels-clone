@@ -3,6 +3,7 @@ export default {
   generate: {
     fallback: true
   },
+  systemvars: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'pexels-clone',
