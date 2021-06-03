@@ -4,6 +4,9 @@ export default {
     fallback: true
   },
   systemvars: true,
+  env: {
+    PEX_KEY: process.env.PEX_KEY
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'pexels-clone',
