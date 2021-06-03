@@ -286,7 +286,7 @@ export default {
       .curated({ per_page: 46, page: 1 })
       .then((res) => {
         this.photos = res.photos
-        console.log(this.photos)
+        // console.log(this.photos)
         const max = this.photos.length
         const min = 0
 
@@ -305,7 +305,7 @@ export default {
   },
   methods: {
     showImage(e) {
-      console.log(e)
+      // console.log(e)
       this.imageSource = e.src.original
       // console.log(this.imageSource)
       this.isVisible = true
@@ -328,8 +328,8 @@ export default {
 
         this.photos = []
         this.photos = photos
-        console.log(this.photos)
-        return false
+        // console.log(this.photos)
+        // return false
       } catch (error) {
         console.trace(error)
       }
