@@ -308,7 +308,7 @@ export default {
     showImage(e) {
       console.log(e)
       this.imageSource = e.src.original
-      console.log(this.imageSource)
+      // console.log(this.imageSource)
       this.isVisible = true
     },
     toggleModal() {
