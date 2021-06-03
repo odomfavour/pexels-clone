@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <nav
-      class="fixed w-full z-50 bg-transparent px-4 lg:px-5 h-16 flex items-center"
+      class="fixed w-full z-50 bg-transparent px-3.5 lg:px-5 h-16 flex items-center"
     >
       <a href="#" class="flex items-center sm:mr-8 mr-2">
         <div class="main-navbar-logo">
@@ -26,7 +26,7 @@
           Pexels
         </div>
       </a>
-      <div class="nav-search-bar hidden max-w-3xl w-2/3 sm:w-full sm:mr-8 mr-4">
+      <div class="nav-search-bar hidden max-w-3xl w-2/3 sm:w-full sm:mr-8 mr-2">
         <form action="">
           <div class="search-container flex bg-lightGrey rounded-md border-0">
             <input
@@ -85,7 +85,7 @@
               >Join</a
             >
           </li>
-          <li class="mr-2 lg:hidden block">
+          <li class="mr-2 sm:mr-4 lg:hidden block">
             <a href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -123,11 +123,11 @@
     >
       <div class="">
         <div class="flex items-center justify-center max-h-500 py-12">
-          <div class="heroo-content text-white sm:max-w-650 max-w-90 mx-auto">
+          <div class="hero-content text-white sm:max-w-650 max-w-90 mx-auto">
             <h1 class="text-4xl font-bold mb-4">
               The best free stock photos & videos shared by talented creators.
             </h1>
-            <div class="search-container">
+            <div class="search-box">
               <div class="nav-search-bar max-w-3xl w-full mr-8">
                 <form @submit.prevent="doSearch">
                   <div
@@ -137,7 +137,7 @@
                       type="search"
                       placeholder="Search for free photos"
                       v-model="searchQuery"
-                      class="rounded-md py-4 px-5 border-0 focus:border-0 flex-grow bg-myTransparent text-black text-lg font-light outline-none focus:bg-white leading-5"
+                      class="rounded-md sm:py-3 py-2 sm:px-5 px-3 border-0 focus:border-0 flex-grow bg-myTransparent text-black-300 text-lg font-light outline-none focus:bg-white leading-5 overflow-hidden"
                     />
                     <button class="rounded-md-t px-4">
                       <div class="icon-search">
