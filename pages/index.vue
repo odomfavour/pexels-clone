@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <nav
-      class="fixed w-full z-50 bg-transparent px-3.5 lg:px-5 lg:h-16 sm:flex sm:justify-between items-center"
+      class="fixed w-full z-50 bg-transparent px-3.5 lg:px-5 lg:h-16 lg:flex lg:justify-between items-center"
       :class="isOpen ? 'bg-primary' : ''"
     >
-      <div class="flex items-center justify-between py-3 sm:w-2/3">
+      <div class="flex items-center justify-between py-3 lg:w-2/3">
         <a href="#" class="flex items-center sm:mr-8 mr-2">
           <div class="main-navbar-logo">
             <svg
@@ -58,7 +58,7 @@
         </div>
         <div class="mobile-icons">
           <ul class="flex flex-row">
-            <li class="mr-2 lg:hidden block p-2">
+            <li class="mr-1 lg:hidden block sm:p-2 p-1">
               <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,7 @@
               </a>
             </li>
             <li class="lg:hidden block">
-              <button class="p-2" @click="isOpen = !isOpen">
+              <button class="sm:p-2 p-1" @click="isOpen = !isOpen">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -241,7 +241,7 @@
         >
       </div>
     </section>
-    <section class="photo-display lg:w-4/5 w-11/12 mx-auto">
+    <section class="photo-display w-11/12 mx-auto">
       <div class="flex justify-between items-center pt-4 pb-2">
         <p class="text-lg font-semibold">Free Stock Photos</p>
         <div class="flex items-center">
@@ -278,14 +278,16 @@
                 <div class="flex items-center">
                   <div class="image-box rounded-full">
                     <img
-                      class="rounded-full h-12"
+                      class="rounded-full h-10 w-10"
                       :src="photo.src.small"
                       :alt="photo.photographer"
                     />
                   </div>
-                  <p class="text-white ml-2">{{ photo.photographer }}</p>
+                  <a href="#" class="text-white ml-2">{{
+                    photo.photographer
+                  }}</a>
                 </div>
-                <div class="icons flex">
+                <div class="icons sm:flex hidden">
                   <a href="#" class="mr-3">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -293,6 +295,7 @@
                       height="24"
                       width="24"
                       fill="#fff"
+                      class="hover:text-red-300"
                       version="1.1"
                       x="0px"
                       y="0px"
