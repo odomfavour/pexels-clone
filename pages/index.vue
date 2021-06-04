@@ -94,7 +94,7 @@
         </div>
       </div>
       <div
-        class="inner-nav ml-auto hidden lg:block"
+        class="inner-nav ml-auto lg:block"
         :class="isOpen ? 'block' : 'hidden'"
       >
         <ul class="sm:flex">
