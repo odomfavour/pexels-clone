@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="">
     <nav
       class="fixed w-full z-50 bg-transparent px-3.5 lg:px-5 lg:h-16 lg:flex lg:justify-between items-center"
       :class="isOpen ? 'bg-primary' : ''"
